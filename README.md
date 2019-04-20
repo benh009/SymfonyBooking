@@ -10,18 +10,48 @@ wamp = Windows Apache MySQL PHP
 echo 'Bonjour le monde !' ;
 ?>
 ```
+lien : http://localhost/demophp/
 
 ## PHP DB 
 
+```sql
+CREATE DATABASE test
+```
+
+```sql
+CREATE TABLE `test`.`user` ( `Id` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(256) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB; 
+```
+
+```sql
+INSERT INTO `user` (`Id`, `Name`) VALUES (NULL, 'Jonathan'),(NULL, 'Franklin'),(NULL, 'Benoit'),(NULL, 'Maxime');
+```
+
+
 ```php
-<?php
-$db = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', 'root', '');
-foreach($db->query('SELECT * FROM user') as $row) {
-echo $row['Name'].' '.$row['Id']; 
-}
+
+<?php $db = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', 'root', '') ?>
+	<table>
+		<tr>
+			<th>
+				Name 
+			</th>
+			<th>
+				id
+			</th>
+		</tr>
+
+		<?php foreach($db->query('SELECT * FROM user') as $row) : ?>
+			<tr>
+				<td> <?php echo $row['Name']?> </td>  <td>  <?php echo $row['Id'] ?></td>
+			</tr>
+		<?php endforeach ?>
+</table>
+
 ?> 
 ```
 
 
 ## Installation la base de symfony 
+``` 
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar create-project symfony/skeleton booking
+```
