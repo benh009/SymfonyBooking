@@ -118,3 +118,55 @@ hello_the_world:
     path:       /hello-world
     controller: App\Controller\HelloWorldController::index
 ``` 
+
+
+
+## Symfony twig 
+
+```
+C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require twig
+```
+
+```php
+<?php
+// src/Controller/HelloWorldController.php
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+use Twig\Environment;
+
+class HelloWorldController
+{
+
+    public function index()
+    {
+        return new Response(
+            'Hello, World!'
+        );
+    }
+	
+	public function index2(Environment $twig)
+  {
+    $content = $twig->render('HelloWorld/index.html.twig',['name' => 'winzou']);
+
+    return new Response($content);
+  }
+}
+```
+
+```yaml
+# config/routes.yaml
+
+hello_the_world:
+    path:       /hello-world
+    controller: App\Controller\HelloWorldController::index
+    
+hello_the_world2:
+    path:       /hello-world2
+    controller: App\Controller\HelloWorldController::index2
+```
+
+```twig
+<h1>Hello {{ name }} !</h1>
+```

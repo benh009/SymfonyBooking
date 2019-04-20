@@ -3,3 +3,7 @@
 hello_the_world:
     path:       /hello-world
     controller: App\Controller\HelloWorldController::index
+    
+hello_the_world2:
+    path:       /hello-world2
+    controller: App\Controller\HelloWorldController::index2
