@@ -61,12 +61,58 @@ INSERT INTO `user` (`Id`, `Name`) VALUES
 ```
 
 
-## Installation la base de symfony 
+## Installation la base de symfony  
+
+commit : 2eed2744213bc9dde1af48dbe678ada0d3c8e313
+
+
+
+``` 
+cd C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking
+``` 
 
 Composer permet d'installer des libs.
 
 ``` 
-C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking
-
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar create-project symfony/skeleton booking
 ```
+
+http://localhost/demobooking/public/
+
+## Symfony HelloWorld
+
+``` 
+cd C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking\booking
+``` 
+
+``` 
+C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require symfony/apache-pack
+``` 
+
+```php
+<?php
+// src/Controller/HelloWorldController.php
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+
+class HelloWorldController
+{
+
+    public function index()
+    {
+        return new Response(
+            'Hello, World!'
+        );
+    }
+}
+``` 
+
+```yaml
+# config/routes.yaml
+
+hello_the_world:
+    path:       /hello-world
+    controller: App\Controller\HelloWorldController::index
+``` 
