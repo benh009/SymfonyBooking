@@ -89,6 +89,8 @@ cd C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking\boo
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require symfony/apache-pack
 ``` 
 
+ajoute le fichier .htaccess
+
 ```php
 <?php
 // src/Controller/HelloWorldController.php
