@@ -1,9 +1,9 @@
 # SymfonyBooking
 
-## Installation 
-### Installation wamp
+
+## Installation wamp
 wamp = Windows Apache MySQL PHP
-### PHP helloworld
+## PHP helloworld
 
 ```php
 <?php
@@ -11,7 +11,7 @@ echo 'Bonjour le monde !' ;
 ?>
 ```
 
-### PHP DB 
+## PHP DB 
 
 ```php
 <?php
@@ -23,5 +23,5 @@ echo $row['Name'].' '.$row['Id'];
 ```
 
 
-### Installation la base de symfony 
+## Installation la base de symfony 
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar create-project symfony/skeleton booking
