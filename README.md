@@ -6,6 +6,7 @@ wamp = Windows Apache MySQL PHP
 ## PHP helloworld
 
 ```php
+<h1> Demo HelloWorld </h1>
 <?php
 echo 'Bonjour le monde !' ;
 ?>
@@ -19,17 +20,26 @@ CREATE DATABASE test
 ```
 
 ```sql
-CREATE TABLE `test`.`user` ( `Id` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(256) NOT NULL , PRIMARY KEY (`Id`)) ENGINE = InnoDB; 
+CREATE TABLE `test`.`user` 
+( 
+	`Id` INT NOT NULL AUTO_INCREMENT ,
+	`Name` VARCHAR(256) NOT NULL , PRIMARY KEY (`Id`)
+) ENGINE = InnoDB; 
 ```
 
 ```sql
-INSERT INTO `user` (`Id`, `Name`) VALUES (NULL, 'Jonathan'),(NULL, 'Franklin'),(NULL, 'Benoit'),(NULL, 'Maxime');
+INSERT INTO `user` (`Id`, `Name`) VALUES 
+	(NULL, 'Jonathan'),
+	(NULL, 'Franklin'),
+	(NULL, 'Benoit'),
+	(NULL, 'Maxime');
 ```
 
 
 ```php
 
 <?php $db = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', 'root', '') ?>
+	<h1> Demo Db </h1>
 	<table>
 		<tr>
 			<th>
