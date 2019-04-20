@@ -62,6 +62,11 @@ INSERT INTO `user` (`Id`, `Name`) VALUES
 
 
 ## Installation la base de symfony 
+
+Composer permet d'installer des libs.
+
 ``` 
+C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking
+
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar create-project symfony/skeleton booking
 ```

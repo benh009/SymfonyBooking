@@ -1,5 +1,6 @@
 
 <?php $db = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', 'root', '') ?>
+	<h1> Demo Db </h1>
 	<table>
 		<tr>
 			<th>
