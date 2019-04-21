@@ -628,8 +628,74 @@ twig:
 
 ```
 
+## Symfony OneToMany
 
-create linked entity
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console make:entity Categorie --api-resource
+```
 
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console make:migration
+```
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console doctrine:migrations:migrate
+```
+
+http://localhost/demobooking/public/api
+
+http://localhost/demobooking/public/api/graphql
+
+```json
+{
+  clients {
+    
+    edges{
+      
+      node{
+        FirstName,
+        LastName,
+        categorie{
+          Description
+        }
+      }
+    }
+  }
+}
+```
+
+```json 
+{
+  "data": {
+    "clients": {
+      "edges": [
+        {
+          "node": {
+            "FirstName": "benoit",
+            "LastName": "hofbauer",
+            "categorie": {
+              "Description": "Particulier"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+```yaml
+easy_admin:
+    entities:
+        - App\Entity\Client
+        - App\Entity\Categorie
+```
+http://localhost/demobooking/public/admin
+
+
+```PHP
+	public function __toString(){
+		return $this->getFirstName();
+	}
+```
 connection /
 
