@@ -3,12 +3,20 @@
 
 ## Installation wamp
 wamp = Windows Apache MySQL PHP
+
+http://www.wampserver.com/
+
 ### phpmyadmin
 http://localhost/phpmyadmin/index.php
+
+user : "root" 
+pwd : ""
 
 database : test 
 
 
+##HTML helloworld
+lien : http://localhost/demophp/HelloWorld.html
 ## PHP helloworld
 
 ```php
@@ -17,7 +25,7 @@ database : test
 echo 'Bonjour le monde !' ;
 ?>
 ```
-lien : http://localhost/demophp/
+lien : http://localhost/demophp/HelloWorld.php
 
 ## PHP DB 
 
@@ -97,7 +105,7 @@ cd C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking\boo
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require symfony/apache-pack
 ``` 
 
-ajoute le fichier .htaccess
+la commande ajoute le fichier .htaccess
 
 ```php
 <?php
@@ -127,7 +135,7 @@ hello_the_world:
     controller: App\Controller\HelloWorldController::index
 ``` 
 
-
+lien : http://localhost/demobooking/public/hello-world
 
 ## Symfony twig 
 
@@ -178,7 +186,7 @@ hello_the_world2:
 ```twig
 <h1>Hello {{ name }} !</h1>
 ```
-
+lien : http://localhost/demobooking/public/hello-world2
 ## Symfony ORM/API/ADMIN
 
 ```
@@ -422,6 +430,10 @@ easy_admin:
 
 ```
 
+client : http://localhost/demobooking/public/admin/?action=list&entity=Client
+user : hofbauer92@gmail.com
+pwd :  hofbauer92@gmail.com
+
 ## Symfony CRUD
 
 ```
@@ -600,6 +612,7 @@ class ClientType extends AbstractType
 {% endblock %}
 ```
 
+lien : http://localhost/demobooking/public/client/
 
 ## Symfony bootstrap
 
