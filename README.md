@@ -3,6 +3,12 @@
 
 ## Installation wamp
 wamp = Windows Apache MySQL PHP
+### phpmyadmin
+http://localhost/phpmyadmin/index.php
+
+database : test 
+
+
 ## PHP helloworld
 
 ```php
@@ -20,7 +26,7 @@ CREATE DATABASE test
 ```
 
 ```sql
-CREATE TABLE `test`.`user` 
+CREATE TABLE `test`.`userPhp` 
 ( 
 	`Id` INT NOT NULL AUTO_INCREMENT ,
 	`Name` VARCHAR(256) NOT NULL , PRIMARY KEY (`Id`)
@@ -28,7 +34,7 @@ CREATE TABLE `test`.`user`
 ```
 
 ```sql
-INSERT INTO `user` (`Id`, `Name`) VALUES 
+INSERT INTO `userPhp` (`Id`, `Name`) VALUES 
 	(NULL, 'Jonathan'),
 	(NULL, 'Franklin'),
 	(NULL, 'Benoit'),
@@ -50,7 +56,7 @@ INSERT INTO `user` (`Id`, `Name`) VALUES
 			</th>
 		</tr>
 
-		<?php foreach($db->query('SELECT * FROM user') as $row) : ?>
+		<?php foreach($db->query('SELECT * FROM userPhp') as $row) : ?>
 			<tr>
 				<td> <?php echo $row['Name']?> </td>  <td>  <?php echo $row['Id'] ?></td>
 			</tr>
@@ -59,6 +65,8 @@ INSERT INTO `user` (`Id`, `Name`) VALUES
 
 ?> 
 ```
+
+lien : http://localhost/demophp/DBAcces.php
 
 
 ## Installation la base de symfony  
@@ -697,5 +705,53 @@ http://localhost/demobooking/public/admin
 		return $this->getFirstName();
 	}
 ```
-connection /
 
+## Symfony security
+```
+C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require symfony/security-bundle
+```
+
+
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console make:user
+```
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console make:migration
+```
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console doctrine:migrations:migrate
+```
+
+https://symfony.com/doc/current/security/form_login_setup.html
+
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console make:auth
+```
+
+```
+C:\wamp\bin\php\php7.3.1\php ./bin/console make:registration-form
+```
+
+
+```YAML
+# config/packages/security.yaml
+security:
+    # ...
+
+    firewalls:
+        main:
+            # ...
+            logout:
+                path:   app_logout
+
+                # where to redirect after logout
+                # target: app_any_route
+
+```
+
+```YAML
+# config/routes.yaml
+app_logout:
+    path: /logout
+    methods: GET
+```

@@ -2,3 +2,9 @@ easy_admin:
     entities:
         - App\Entity\Client
         - App\Entity\Categorie
+        - App\Entity\Business
+        - App\Entity\Service
+        - App\Entity\Staff
+        - App\Entity\StaffRole
+        - App\Entity\Customer
+        - App\Entity\User

@@ -1,5 +1,9 @@
 # config/routes.yaml
 
+app_logout:
+    path: /logout
+    methods: GET
+
 hello_the_world:
     path:       /hello-world
     controller: App\Controller\HelloWorldController::index

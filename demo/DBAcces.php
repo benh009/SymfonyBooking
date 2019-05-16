@@ -11,7 +11,7 @@
 			</th>
 		</tr>
 
-		<?php foreach($db->query('SELECT * FROM user') as $row) : ?>
+		<?php foreach($db->query('SELECT * FROM userPhp') as $row) : ?>
 			<tr>
 				<td> <?php echo $row['Name']?> </td>  <td>  <?php echo $row['Id'] ?></td>
 			</tr>
