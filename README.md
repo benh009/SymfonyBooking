@@ -79,6 +79,16 @@ lien : http://localhost/demophp/DBAcces.php
 
 ## Installation la base de symfony  
 
+lien : https://symfony.com/
+
+Symfony is a set of reusable PHP components
+
+Symfony 4 vs Symfony 3. Petit module vs Mono block
+
+
+Doc : https://symfony.com/doc/current/index.html#gsc.tab=0
+
+
 commit : 2eed2744213bc9dde1af48dbe678ada0d3c8e313
 
 
@@ -101,11 +111,15 @@ http://localhost/demobooking/public/
 cd C:\Users\benoithofbauer\Desktop\perso\symfony\Presentation\SymfonyBooking\booking
 ``` 
 
+### Setting 
+
 ``` 
 C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require symfony/apache-pack
 ``` 
 
 la commande ajoute le fichier .htaccess
+
+### MVC 
 
 ```php
 <?php
