@@ -1,4 +1,4 @@
-# SymfonyBooking
+# SymfonyWokShop
 
 
 ## Installation wamp
