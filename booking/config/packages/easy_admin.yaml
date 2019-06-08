@@ -8,3 +8,4 @@ easy_admin:
         - App\Entity\StaffRole
         - App\Entity\Customer
         - App\Entity\User
+        - App\Entity\Appointment

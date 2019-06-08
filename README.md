@@ -782,3 +782,34 @@ app_logout:
     path: /logout
     methods: GET
 ```
+
+## Symfony traduction 
+ ```
+C:\wamp\bin\php\php7.3.1\php C:\ProgramData\ComposerSetup\bin\composer.phar require symfony/translation
+```
+
+
+
+
+```YAML
+# /booking/translations/messages.en.yml
+FirstName: First name
+LastName : Last name
+```
+
+```YAML
+# booking/config/routes/annotations.yaml
+controllers:
+    resource: ../../src/Controller/
+    type: annotation
+    prefix:
+        en: 'en' 
+        nl: 'nl'
+        fr: 'fr'
+```
+
+```YAML
+# booking/config/services.yaml
+parameters:
+    locale: 'en'
+```

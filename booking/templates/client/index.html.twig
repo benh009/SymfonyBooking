@@ -4,25 +4,26 @@
 
 {% block body %}
     <h1>Client index</h1>
+	   <h1 class="jumbotron-heading">Client index</h1>
 
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>FirstName</th>
-                <th>LastName</th>
+    
+                <th>{{ 'FirstName'|trans }}</th>
+                <th>{{ 'LastName'|trans }} </th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for client in clients %}
             <tr>
-                <td>{{ client.id }}</td>
+         
                 <td>{{ client.FirstName }}</td>
                 <td>{{ client.LastName }}</td>
                 <td>
-                    <a href="{{ path('client_show', {'id': client.id}) }}">show</a>
-                    <a href="{{ path('client_edit', {'id': client.id}) }}">edit</a>
+                    <a href="{{ path('client_show', {'id': client.id}) }}"><i class="fas fa-2x fa-eye"></i></a>
+                    <a href="{{ path('client_edit', {'id': client.id}) }}"><i class="fas fa-2x fa-edit"></i></a>
                 </td>
             </tr>
         {% else %}
